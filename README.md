@@ -3,3 +3,10 @@
 ## Navegação no Site
 No cabeçalho do site há uma barra de navegação,onde o internauta encontrará as seguintes categorias:
 * ### Home
+Contém um panorama geral do site;
+* ### Sobre Nós
+Seção destinada à contar sobre a história da empresa.
+* ### Hortas Comunitárias
+Demonstração de como seria a implementação desta ideia em espaços sem utilidade, com o objetivo de destribuir os alimentos cultivados à famílias carentes.
+* ### Outros Projetos
+* 
