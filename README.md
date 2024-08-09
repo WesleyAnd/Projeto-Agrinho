@@ -1,7 +1,7 @@
 # Nuance 
 Arquitetura e Urbanismo
 ## Descrição
- O objetivo da Nuance é expor problemas comumente observadas na cidade de Curitiba, como a degradação do solo e a perda de espaços, e a partir disso, apresentar soluções sustentáveis, tecnologia e aspectos rurais.
+ O objetivo da Nuance é expor problemas comumente observadas na cidade de Curitiba, como a degradação do solo e a perda de espaços, e a partir disso, apresentar soluções sustentáveis, tecnologia com aspectos rurais.
 ## Navegação no Site
 No cabeçalho do site há uma barra de navegação,onde o internauta encontrará as seguintes categorias:
 * ### Home
