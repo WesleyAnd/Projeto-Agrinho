@@ -12,3 +12,12 @@ Seção destinada à contar sobre a história da empresa.
 Demonstração de como seria a implementação desta ideia em espaços sem utilidade, com o objetivo de destribuir os alimentos cultivados à famílias carentes.
 * ### Outros Projetos
 Apresentação de projetos relevantes realizados pela empresa. 
+## Funcionalidade
+* ### Saiba mais sobre nós
+* ### Ideia de Agricultura na cidade.
+* ### Tecnologia e Inovação
+* ### Modo Noturno.
+* ### Responsividade: #### adaptado a todos os tamanhos de tela.
+* ### Acessibilidade.
+## Mais Informações
+Em caso de dúvidas ou a necessidade de mais informações, você pode entrar em contato conosco pelo e-mail: wesley.andrerodrigues.alves@escola.pr.gov.br
