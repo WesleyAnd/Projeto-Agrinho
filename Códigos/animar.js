@@ -42,3 +42,13 @@ sr.reveal('.segunda-parte-conteudo', {
     rotate: { x: 0, y: 0, z: 0},
     duration: 3000
 });
+
+/*Outros Projetos*/
+
+const linhasNav = document.getElementById('aba-conteudo')
+
+linhasNav.addEventListener('click', animarLinhas)
+
+function animarLinhas(){
+    linhasNav.classList.toggle('abrir')
+}

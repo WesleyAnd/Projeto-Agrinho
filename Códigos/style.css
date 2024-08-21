@@ -434,6 +434,119 @@ body{
     margin: 60px 0;
 }
 
+.carrossel-slide2{
+    max-width: 100%;
+    max-height: 450px;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.navegação-auto2{
+    position: absolute;
+    width: 100%;
+    margin-top: 240px;
+    bottom: 80px;
+    display: flex;
+    justify-content: center;   
+}
+
+.navegação-manual2{
+    position: absolute;
+    width: 100%;
+    margin-top: -0px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 80px;
+}
+
+.legenda-projetos{
+    font-size: 16px;
+    color: var(--fonte-legenda);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    min-width: 500px;
+    width: 70%;   
+}
+
+.linhas{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin: 90px 0;
+}
+
+.linha-transporte-interbairros{
+    height: 30px;
+    width: 85px;
+    min-width: 45px;
+    background-color: #2e8b57;
+    border-radius: 60px;
+    font-family: var(--fonte-texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.linha-transporte-biarticulado{
+    height: 30px;
+    width: 85px;
+    min-width: 45px;
+    background-color: red;
+    border-radius: 60px;
+    font-family: var(--fonte-texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.linha-transporte-ligeirinho{
+    height: 30px;
+    width: 85px;
+    min-width: 45px;
+    background-color: gray;
+    border-radius: 60px;
+    font-family: var(--fonte-texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    cursor: pointer;  
+}
+
+.linha-transporte-ligeirinho:not(:last-child){
+    margin-right: 20px;
+}
+
+.linha-transporte-alimentadores{
+    height: 30px;
+    width: 85px;
+    min-width: 45px;
+    background-color: orangered;
+    border-radius: 60px;
+    font-family: var(--fonte-texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    cursor: pointer;  
+    margin-right: 20px;
+}
+
+.aba-conteudo{
+    visibility: hidden;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.aba-conteudo.abrir{
+    visibility: visible;
+}
+
 /* programação rodapé */
 
 .rodape{
@@ -634,6 +747,20 @@ body{
                 height: 600px;
             }
 
+
+            .texto-projetos{
+                font-size: 20px;
+            }
+
+            .navegação-manual2{
+                top: 220px;
+                bottom: 220px;
+                
+            }
+
+            .carrossel-slide2{
+                max-height: 300px;
+            }
 }
 
 @media screen and (max-width: 600px){
@@ -644,6 +771,10 @@ body{
 
     .navegação-auto{
         bottom: 120px;
+    }
+
+    .carrossel-slide2{
+        max-height: 200px;
     }
 
             /* Principal SOBRE NÓS */
