@@ -1,3 +1,35 @@
+/*Outros Projetos*/
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var buttons = document.querySelectorAll('[class^="botao-linha-transporte"]');
+    var cards = document.querySelectorAll('[class^="aba-conteudo"]');
+
+    buttons.forEach((button, index) => {
+        button.addEventListener('click', function(event) {
+            event.stopPropagation();
+
+            // Fecha todas as outras abas
+            cards.forEach((card, cardIndex) => {
+                if (cardIndex !== index) {
+                    card.classList.remove('ativo');
+                }
+            });
+
+            // Alterna a aba clicada
+            cards[index].classList.toggle('ativo');
+        });
+    });
+
+    document.addEventListener('click', function(event) {
+        cards.forEach(card => {
+            if (!card.contains(event.target) && !Array.from(buttons).includes(event.target)) {
+                card.classList.remove('ativo');
+            }
+        });
+    });
+});
+
 /* cabeçalho */
 
 const menuNav = document.getElementById('botoes-mobile')
@@ -43,12 +75,3 @@ sr.reveal('.segunda-parte-conteudo', {
     duration: 3000
 });
 
-/*Outros Projetos*/
-
-const linhasNav = document.getElementById('aba-conteudo')
-
-linhasNav.addEventListener('click', animarLinhas)
-
-function animarLinhas(){
-    linhasNav.classList.toggle('abrir')
-}

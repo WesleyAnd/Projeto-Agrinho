@@ -461,7 +461,8 @@ body{
     bottom: 80px;
 }
 
-.legenda-projetos{
+#legenda-projetos{
+    display: flex;
     font-size: 16px;
     color: var(--fonte-legenda);
     margin-top: 10px;
@@ -478,73 +479,115 @@ body{
     margin: 90px 0;
 }
 
-.linha-transporte-interbairros{
+
+#botao-linha-transporte-interbairros{
     height: 30px;
     width: 85px;
     min-width: 45px;
-    background-color: #2e8b57;
     border-radius: 60px;
     font-family: var(--fonte-texto);
+    background-color: #2e8b57;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     margin-right: 20px;
+    border: none;
 }
 
-.linha-transporte-biarticulado{
+#botao-linha-transporte-biarticulado{
     height: 30px;
     width: 85px;
     min-width: 45px;
-    background-color: red;
     border-radius: 60px;
     font-family: var(--fonte-texto);
+    background-color: red;
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
     cursor: pointer;
     margin-right: 20px;
+    border: none;
 }
 
-.linha-transporte-ligeirinho{
+#botao-linha-transporte-ligeirinho{
     height: 30px;
     width: 85px;
     min-width: 45px;
+    border-radius: 60px;
+    font-family: var(--fonte-texto);
     background-color: gray;
-    border-radius: 60px;
-    font-family: var(--fonte-texto);
     display: flex;
     justify-content: center;
-    align-items: center;  
-    cursor: pointer;  
-}
-
-.linha-transporte-ligeirinho:not(:last-child){
+    align-items: center;
+    cursor: pointer;
     margin-right: 20px;
+    border: none;
 }
 
-.linha-transporte-alimentadores{
+
+#botao-linha-transporte-alimentadores{
     height: 30px;
     width: 85px;
     min-width: 45px;
-    background-color: orangered;
     border-radius: 60px;
     font-family: var(--fonte-texto);
+    background-color: orangered;
     display: flex;
     justify-content: center;
-    align-items: center;  
-    cursor: pointer;  
+    align-items: center;
+    cursor: pointer;
     margin-right: 20px;
+    border: none;
 }
 
-.aba-conteudo{
-    visibility: hidden;
-    transition: 0.5s;
-    overflow: hidden;
+#aba-conteudo1{
+    display: none;
 }
 
-.aba-conteudo.abrir{
-    visibility: visible;
+#aba-conteudo1.ativo{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+#aba-conteudo1 img{
+    width: 50%;
+    border-radius: 30px;
+}
+
+
+.linhas-parada{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-paradas{
+    font-family: "chakra petch";
+    font-size: 25px;
+    color: var(--texto-botao);
+    max-width: 100%;
+    margin-bottom: 25px;
+    margin-left: 20px;
+}
+
+.paradas-linhas-terminal{
+    font-family: var(--fonte-texto);
+    color: var(--cabeçalho);
+    font-size: 20px;
+    width: 370px;
+    display: flex;
+}
+
+.paradas-linhas{
+    font-family: var(--fonte-texto);
+    color: var(--fonte-legenda);
+    font-size: 16px;
+    width: 355px;
+    display: flex;  
 }
 
 /* programação rodapé */
@@ -729,6 +772,26 @@ body{
         width: 100%;
         justify-content: center;
     }
+
+    /*Outros Projetos*/
+
+    .aba-conteudo{
+        flex-direction: column;
+    }
+
+    .aba-conteudo img{
+        width: 100%;
+    }
+    
+
+    .paradas-linhas-terminal{
+        font-size: 20px;
+    }
+    
+    .paradas-linhas{
+        font-size: 15px;
+    }
+
 }
 
 @media screen and (max-width: 720px){
