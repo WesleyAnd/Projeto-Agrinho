@@ -42,23 +42,32 @@ function animarMenu(){
 
 /* conteudo principal */
 
-let count=1
-document.getElementById("radio1").checked = true;
 
-setInterval( function(){
-    nextImage();
-}, 5000)
+/*carrossel Outros Projetos*/
 
-function nextImage(){
-    count++;
-    if(count>3){
-        count=1;
+
+function setupCarrossel(carrosselIndex) {
+    let count = 1;
+    document.getElementById(`radio1-${carrosselIndex}`).checked = true;
+
+    setInterval(function() {
+        nextImage(carrosselIndex);
+    }, 5000);
+
+    function nextImage(index) {
+        count++;
+        if (count > 2) { 
+            count = 1;
+        }
+
+        document.getElementById(`radio${count}-${index}`).checked = true;
     }
-
-    document.getElementById("radio"+count).checked = true;
 }
 
 
+setupCarrossel(1);
+setupCarrossel(2);
+setupCarrossel(3);
 
 
 /*Efeito Home*/
@@ -76,4 +85,3 @@ sr.reveal('.segunda-parte-conteudo', {
     rotate: { x: 0, y: 0, z: 0},
     duration: 3000
 });
-
