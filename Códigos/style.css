@@ -6,17 +6,38 @@
 
 :root{
     --cabeçalho: #2e8b57;
+    --titulos: #2e8b57;
     --texto-cabeçalho: #ffffff;
     --fundo: #f5f5dc;
     --texto-principal: #333333;
     --botao: #90ee90;
     --texto-botao: #8b4513;
+    --texto-botao-selecionado: #8b4513;
     --botao-transparente: #90ee907e;
     --texto-botao-transparente: #8b4513c5;
     --rodape: #e4e3e3;
     --fonte-texto: "Poppins";
     --fonte-legenda: #4b4b4b;
+    --icones-rodape: #000000; 
 }
+
+:root.dark{
+    --cabeçalho: #2e8b57;
+    --titulos: #90ee90;
+    --texto-cabeçalho: #ffffff;
+    --fundo: rgb(24, 31, 28);
+    --texto-principal: #ffffff;
+    --botao: rgb(97, 97, 97);
+    --texto-botao: #8d5832;
+    --texto-botao-selecionado: #90ee90;
+    --botao-transparente: #90ee907e;
+    --texto-botao-transparente: #8b4513c5;
+    --rodape: rgb(42, 54, 49);
+    --fonte-texto: "Poppins";
+    --fonte-legenda: #4b4b4b;
+    --icones-rodape: #90ee90;
+}
+
 
 /* programação cabeçalho */
 
@@ -28,6 +49,7 @@
     max-width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     position: sticky;
     top:0;
     z-index: 1000;
@@ -45,6 +67,69 @@
 
 }
 
+/*Modo Noturno*/
+
+.parte-principal-cabeçalho{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.trilho{
+    margin: 40px 20px;
+    width: 105px;
+    height: 50px;
+    background-color: var(--botao);
+    border-radius: 150px;
+    position: relative;
+    cursor: pointer;
+}
+
+.trilho.dark{
+    background-color: rgb(97, 97, 97);
+}
+
+.trilho .indicador{
+    width: 50px;
+    height: 50px;
+    background-color: var(--texto-cabeçalho);
+    border-radius: 50%;
+    transform: scale(.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    transition: left 0.5s ease; 
+}
+
+.trilho.dark .indicador{
+    left: 55px;
+    background-color: rgb(65, 65, 65);
+}
+
+.sol{
+    color: rgb(65, 65, 65);
+    width: 25px;
+    height: 25px;
+}
+
+.trilho.dark .sol{
+    display: none;
+}
+
+.lua{
+    display: none;
+}
+
+.trilho.dark .lua{
+    display: block;
+    color: var(--texto-cabeçalho);
+    width: 25px;
+    height: 25px;  
+}
+
+/*Barra de Navegação*/
 .botoes{
     display: flex;
     flex-direction: row;
@@ -59,7 +144,7 @@
 }
 
 .botoes :hover{
-    background-color: var(--texto-botao);
+    background-color: var(--texto-botao-selecionado);
     color: var(--texto-cabeçalho);
     transition: 1s;
 }
@@ -71,9 +156,9 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: var(--texto-botao);
+    color: var(--texto-botao-selecionado);
     border-right: 4px solid var(--cabeçalho);
-    border-bottom: 4px solid var(--texto-botao) ;
+    border-bottom: 4px solid var(--texto-botao-selecionado) ;
     font-family: var(--fonte-texto);
     font-size: 24px;
 }
@@ -178,7 +263,7 @@ body{
 }
 
 .textos-principais span{
-    color: var(--texto-botao);
+    color: var(--texto-botao-selecionado);
 }
 
 
@@ -198,7 +283,7 @@ body{
 
 .botao-textos-principais:hover{
     color: var(--texto-cabeçalho);
-    background-color: var(--texto-botao);
+    background-color: var(--texto-botao-selecionado);
 }
 
 .carrossel-slide{
@@ -284,7 +369,7 @@ body{
 }
 
 .navegação-auto div{
-    border: 2px solid var(--texto-botao);
+    border: 2px solid var(--texto-botao-selecionado);
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -332,7 +417,7 @@ body{
 }
 
 .sobrenos-parte-conteudo span{
-    color: var(--texto-botao);
+    color: var(--texto-botao-selecionado);
 }
 
 .parte-img-sobrenos{
@@ -366,11 +451,11 @@ body{
     padding: 10px;
     max-width: 90%;
     justify-content: center;
-    text-shadow: 3px 3px 4px var(--texto-principal);
+    text-shadow: 3px 3px 4px #333333;
 }
 
 .texto-principal-sobrenos span{
-    text-shadow: 3px 3px 4px var(--texto-principal);
+    text-shadow: 3px 3px 4px #333333;
 }
 
 /*programação conteúdo principal HORTAS COMUNITÁRIAS*/
@@ -383,12 +468,12 @@ body{
 }
 
 .texto-hortas span{
-    color: var(--texto-botao);
+    color: var(--texto-botao-selecionado);
 }
 
 .titulo-hortas{
     font-family: "chakra petch";
-    color: var(--cabeçalho);
+    color: var(--titulos);
     font-size: 45px;
     margin-bottom: 35px;
 
@@ -404,7 +489,7 @@ body{
 }
 
 .pontos-hortas b{
-    color: var(--texto-botao);
+    color: var(--texto-botao-selecionado);
 }
 
 .beneficios-hortas{
@@ -420,6 +505,7 @@ body{
 
 .texto-projetos{
     font-family: var(--fonte-texto);
+    color: var(--texto-principal);
     font-size: 25px;
 }
 
@@ -430,7 +516,7 @@ body{
 .titulo-outros-projetos{
     font-size: 35px;
     font-family: "chakra petch";
-    color: var(--texto-botao);
+    color: var(--titulos);
     margin: 60px 0;
 }
 
@@ -461,11 +547,12 @@ body{
     bottom: 80px;
 }
 
-.legendas-projetos{
+.mais-informações-projetos{
     display: flex;
     font-size: 16px;
     color: var(--fonte-legenda);
-    margin-top: 10px;
+    font-family: var(--fonte-texto);
+    margin-top: 30px;
     margin-bottom: 20px;
     min-width: 500px;
     width: 70%;   
@@ -598,6 +685,14 @@ body{
     margin-left: -25%;
 }
 
+#radio1-3:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2-3:checked ~ .first {
+    margin-left: -25%;
+}
+
 /* programação rodapé */
 
 .rodape{
@@ -656,6 +751,7 @@ body{
 
 .icone-rodape{
     margin-right: 8px;
+    color: var(--icones-rodape);
 }
 
 .icone-rodape:hover{
@@ -779,6 +875,10 @@ body{
         display: flex;
         width: 100%;
         justify-content: center;
+    }
+
+    .icone-rodape{
+        color: var(--icones-rodape);
     }
 
     /*Outros Projetos*/

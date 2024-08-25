@@ -1,36 +1,18 @@
-/*Outros Projetos*/
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    var buttons = document.querySelectorAll('[class^="botao-linha-transporte"]');
-    var cards = document.querySelectorAll('[class^="aba-conteudo"]');
-
-    buttons.forEach((button, index) => {
-        button.addEventListener('click', function(event) {
-            event.stopPropagation();
-
-
-            cards.forEach((card, cardIndex) => {
-                if (cardIndex !== index) {
-                    card.classList.remove('ativo');
-                }
-            });
-
-
-            cards[index].classList.toggle('ativo');
-        });
-    });
-
-    document.addEventListener('click', function(event) {
-        cards.forEach(card => {
-            if (!card.contains(event.target) && !Array.from(buttons).includes(event.target)) {
-                card.classList.remove('ativo');
-            }
-        });
-    });
-});
 
 /* cabeçalho */
+
+/*Modo Dark*/
+
+let trilho = document.getElementById('trilho')
+let cores = document.querySelector(':root')
+
+trilho.addEventListener('click', ()=>{
+
+    trilho.classList.toggle('dark')
+    cores.classList.toggle('dark')
+
+})
+
 
 const menuNav = document.getElementById('botoes-mobile')
 

@@ -32,6 +32,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /* cabeçalho */
 
+/*Modo Dark*/
+
+let trilho = document.getElementById('trilho')
+let cores = document.querySelector(':root')
+
+trilho.addEventListener('click', ()=>{
+
+    trilho.classList.toggle('dark')
+    cores.classList.toggle('dark')
+
+})
+
+
+/*Menu*/
+
 const menuNav = document.getElementById('botoes-mobile')
 
 menuNav.addEventListener('click', animarMenu)
